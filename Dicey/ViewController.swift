@@ -41,6 +41,23 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func rollDicePressed(_ sender: Any) {
+        
+        //Getting random Integer values
+        let randomInt1 : Int = Int(arc4random_uniform(6))
+        let randomInt2 : Int = Int(arc4random_uniform(6))
+        
+        // Debug prints Random Dices
+        print(diceStr + String(randomInt1))
+        print(diceStr + String(randomInt2))
+
+        // Setting images for random dice.
+        diceImage1.image = UIImage(named: diceStr + String(randomInt1 + 1))
+        diceImage2.image = UIImage(named: diceStr + String(randomInt2 + 1))
+        
+    }
+    
 
 }
 
