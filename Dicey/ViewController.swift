@@ -9,11 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    //IBOutlets
     @IBOutlet weak var shakeLabel: UILabel!
     @IBOutlet weak var buttonDiceLabel: UIButton!
+    @IBOutlet weak var fireImageView: UIImageView!
     
-    //IBOutlets
     @IBOutlet weak var diceImage1: UIImageView!
     @IBOutlet weak var diceImage2: UIImageView!
     
@@ -78,8 +78,11 @@ class ViewController: UIViewController {
     
     @IBAction func rollDicePressed(_ sender: Any) {
         print("rollDicePressed")
+        //Setting default Image
+        fireImageView.image = UIImage(named: "fire")
         // call function
         randomDices()
+        
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -114,6 +117,8 @@ class ViewController: UIViewController {
         if diceChange % 7 == 0 || diceChange % 9 == 0 {
             shakeLabel.isHidden = false
             shakeLabel.text = "SensehacK"
+//            fireImageView.image = UIImage(named: "fireg")
+            
         }
         else {
             shakeLabel.isHidden = true
