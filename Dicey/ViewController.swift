@@ -111,11 +111,9 @@ class ViewController: UIViewController {
         diceImage1.image = UIImage(named: diceStr + String(randomInt1 + 1))
         diceImage2.image = UIImage(named: diceStr + String(randomInt2 + 1))
         
-        if diceChange % 3 == 0 {
+        if diceChange % 7 == 0 || diceChange % 9 == 0 {
             shakeLabel.isHidden = false
             shakeLabel.text = "SensehacK"
-            
-            
         }
         else {
             shakeLabel.isHidden = true
