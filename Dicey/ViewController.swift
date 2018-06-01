@@ -119,6 +119,7 @@ class ViewController: UIViewController {
             shakeLabel.text = "SensehacK"
 //            fireImageView.image = UIImage(named: "fireg")
             
+            fireImageView.loadGif(name: "fireg")
         }
         else {
             shakeLabel.isHidden = true

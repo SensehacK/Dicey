@@ -13,6 +13,7 @@
 		43A3F16620C02A57009915D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43A3F16520C02A57009915D1 /* Assets.xcassets */; };
 		43A3F16920C02A57009915D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43A3F16720C02A57009915D1 /* LaunchScreen.storyboard */; };
 		43A3F17120C1231E009915D1 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3F17020C1231E009915D1 /* iOSDevCenters+GIF.swift */; };
+		43A3F17320C124D0009915D1 /* fireg.gif in Resources */ = {isa = PBXBuildFile; fileRef = 43A3F17220C124D0009915D1 /* fireg.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		43A3F16820C02A57009915D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43A3F16A20C02A57009915D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43A3F17020C1231E009915D1 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		43A3F17220C124D0009915D1 /* fireg.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = fireg.gif; path = "Extra Assets/fireg.gif"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				43A3F16020C02A54009915D1 /* ViewController.swift */,
 				43A3F16220C02A54009915D1 /* Main.storyboard */,
 				43A3F16520C02A57009915D1 /* Assets.xcassets */,
+				43A3F17220C124D0009915D1 /* fireg.gif */,
 				43A3F17020C1231E009915D1 /* iOSDevCenters+GIF.swift */,
 				43A3F16720C02A57009915D1 /* LaunchScreen.storyboard */,
 				43A3F16A20C02A57009915D1 /* Info.plist */,
@@ -127,6 +130,7 @@
 			files = (
 				43A3F16920C02A57009915D1 /* LaunchScreen.storyboard in Resources */,
 				43A3F16620C02A57009915D1 /* Assets.xcassets in Resources */,
+				43A3F17320C124D0009915D1 /* fireg.gif in Resources */,
 				43A3F16420C02A54009915D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
