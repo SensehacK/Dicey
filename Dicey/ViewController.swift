@@ -58,6 +58,15 @@ class ViewController: UIViewController {
         
     }
     
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            diceImage1.image = #imageLiteral(resourceName: "dice6")
+        }
+        else {
+            print("No shakes for you today")
+        }
+    }
+    
 
 }
 
