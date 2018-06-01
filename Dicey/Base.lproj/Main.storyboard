@@ -96,6 +96,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="buttonDiceLabel" destination="EiN-If-TXz" id="oaX-vZ-937"/>
                         <outlet property="diceImage1" destination="JDU-Gz-rCC" id="1R3-Tc-d2B"/>
                         <outlet property="diceImage2" destination="X6Q-Gz-PcJ" id="Jpe-mF-a9k"/>
                         <outlet property="shakeLabel" destination="G4I-mu-ldb" id="BXT-8w-Ayu"/>

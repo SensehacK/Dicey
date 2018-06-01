@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var shakeLabel: UILabel!
+    @IBOutlet weak var buttonDiceLabel: UIButton!
     
     //IBOutlets
     @IBOutlet weak var diceImage1: UIImageView!
@@ -19,23 +20,34 @@ class ViewController: UIViewController {
     
     //Variables
     let diceStr = "dice"
-    
-    
+    var appOpen: Int = 1
+    var diceChange: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         shakeLabel.isHidden = false
         
-        //Check first launch
+        
+        //Check first launch & Checking how much time App was opened
         if UserDefaults.standard.bool(forKey: "FirstLaunch") {
             print("Not first Launch")
+            var appOpenUD = UserDefaults.standard.integer(forKey: "AppOpen")
+            appOpenUD = appOpenUD + appOpen
+            UserDefaults.standard.set(appOpenUD, forKey: "AppOpen")
+            print(appOpenUD)
             shakeLabel.isHidden = true
+            buttonDiceLabel.setTitle("Shake it", for: .normal)
         }
         else {
             print("First Launch")
             UserDefaults.standard.set(true, forKey: "FirstLaunch")
+            UserDefaults.standard.set(appOpen, forKey: "AppOpen")
         }
+
+
+        
+        
         
         //Trial Debug
         
