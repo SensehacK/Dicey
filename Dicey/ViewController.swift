@@ -29,8 +29,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        shakeLabel.isHidden = false
-        
+        //Initialize function
+        initializeUI()
         
         //Check first launch & Checking how much time App was opened
         if UserDefaults.standard.bool(forKey: "FirstLaunch") {
@@ -100,6 +100,15 @@ class ViewController: UIViewController {
         }
     }
     
+    func initializeUI() {
+        shakeLabel.isHidden = false
+        fireIVW = Double(fireImageView.frame.size.width)
+        fireIVH = Double(fireImageView.frame.size.height)
+        print("fireIVW", fireIVW)
+        print("fireIVH", fireIVH)
+    }
+    
+    
     // Random Logic for Dice
     func randomDices() {
         diceChange = diceChange + 1
@@ -133,6 +142,19 @@ class ViewController: UIViewController {
             //Setting default Image function
             normalFireImageView()
         }
+    }
+    
+    func normalFireImageView() {
+        print("Debug fire Image view width & height")
+//        fireIVW = fireImageView.frame.size.width
+//        fireIVH = fireImageView.frame.size.height
+        print(fireIVW)
+        print(fireIVH)
+        fireImageView.frame.size.width = CGFloat(fireIVW)
+        fireImageView.frame.size.height = CGFloat(fireIVH)
+        fireImageView.contentMode = UIViewContentMode.scaleAspectFit
+        fireImageView.image = UIImage(named: "fire")
+        
     }
 
 }
