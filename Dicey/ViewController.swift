@@ -135,6 +135,7 @@ class ViewController: UIViewController {
 //            fireImageView.autoresizingMask = .None
         }
         else if diceChange % 8 == 0  {
+            shakeLabel.isHidden = false
             shakeLabel.text = "Adhvazila.in"
         }
         else {
