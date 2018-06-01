@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,11 +16,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dicey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="Fnu-0U-5td">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="JDU-Gz-rCC">
                                 <rect key="frame" x="16" y="233" width="132" height="128"/>
@@ -30,7 +31,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiN-If-TXz">
-                                <rect key="frame" x="78" y="543" width="210" height="58"/>
+                                <rect key="frame" x="78" y="431.5" width="210" height="58.5"/>
                                 <color key="backgroundColor" red="0.61082446575164795" green="0.10584760457277298" blue="0.1195317879319191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="edu-gj-wGo"/>
@@ -48,22 +49,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJ1-Lg-ZFD">
-                                <rect key="frame" x="67" y="737.66666666666663" width="80" height="20.333333333333371"/>
+                                <rect key="frame" x="67" y="626.5" width="80" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.83715969324111938" green="0.80201464891433716" blue="0.16482171416282654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fire" translatesAutoresizingMaskIntoConstraints="NO" id="Dws-4x-f9C">
-                                <rect key="frame" x="145" y="655" width="76" height="103"/>
+                                <rect key="frame" x="145" y="544" width="76" height="103"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="ixn-Dp-4Fb"/>
                                     <constraint firstAttribute="height" constant="103" id="rZ2-gk-aYN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="by Kautilya" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-9n-kqu">
-                                <rect key="frame" x="223.00000000000003" y="737.66666666666663" width="83.333333333333343" height="20.333333333333371"/>
+                                <rect key="frame" x="223" y="626.5" width="83.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.568397174046121" blue="0.29360221117549901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4I-mu-ldb">
+                                <rect key="frame" x="146" y="368.5" width="83" height="29"/>
+                                <color key="backgroundColor" red="0.61082655191421509" green="0.1059398278594017" blue="0.1148364320397377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.83132904767990112" blue="0.47322356700897217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -73,9 +81,12 @@
                             <constraint firstItem="EiN-If-TXz" firstAttribute="centerX" secondItem="Dws-4x-f9C" secondAttribute="centerX" id="8Ih-fI-Qno"/>
                             <constraint firstItem="Fnu-0U-5td" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8eU-mx-9yR"/>
                             <constraint firstItem="Dws-4x-f9C" firstAttribute="leading" secondItem="tJ1-Lg-ZFD" secondAttribute="trailing" constant="-2" id="GL9-cX-CDg"/>
+                            <constraint firstItem="EiN-If-TXz" firstAttribute="top" secondItem="G4I-mu-ldb" secondAttribute="bottom" constant="34" id="KaC-Zb-YcD"/>
                             <constraint firstAttribute="trailing" secondItem="Fnu-0U-5td" secondAttribute="trailing" id="Ljo-t9-OUm"/>
+                            <constraint firstItem="G4I-mu-ldb" firstAttribute="width" secondItem="EiN-If-TXz" secondAttribute="height" multiplier="41:29" id="Np4-10-LR0"/>
                             <constraint firstItem="Fnu-0U-5td" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QZD-ae-4ac"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CFu-9n-kqu" secondAttribute="bottom" constant="20" id="R7E-Sn-Atr"/>
+                            <constraint firstItem="G4I-mu-ldb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vbf-UI-adG"/>
                             <constraint firstItem="CFu-9n-kqu" firstAttribute="leading" secondItem="Dws-4x-f9C" secondAttribute="trailing" constant="2" id="drL-gE-ALK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dws-4x-f9C" secondAttribute="bottom" constant="20" id="frg-E5-aFy"/>
                             <constraint firstItem="Fnu-0U-5td" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ngO-9O-3Zy"/>
@@ -87,18 +98,19 @@
                     <connections>
                         <outlet property="diceImage1" destination="JDU-Gz-rCC" id="1R3-Tc-d2B"/>
                         <outlet property="diceImage2" destination="X6Q-Gz-PcJ" id="Jpe-mF-a9k"/>
+                        <outlet property="shakeLabel" destination="G4I-mu-ldb" id="BXT-8w-Ayu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="117.39130434782609" y="118.20652173913044"/>
         </scene>
     </scenes>
     <resources>
-        <image name="dice1" width="100" height="100"/>
-        <image name="dice3" width="100" height="100"/>
-        <image name="diceeLogo" width="196" height="128"/>
+        <image name="dice1" width="150" height="150"/>
+        <image name="dice3" width="150" height="150"/>
+        <image name="diceeLogo" width="147" height="96"/>
         <image name="fire" width="243" height="300"/>
-        <image name="newbackground" width="444" height="414"/>
+        <image name="newbackground" width="333" height="311"/>
     </resources>
 </document>
