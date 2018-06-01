@@ -87,7 +87,7 @@ class ViewController: UIViewController {
             print("motionShake")
             // call function
             randomDices()
-            shakeLabel.isHidden = true
+            
         }
         else {
             print("No shakes for you today")
@@ -96,6 +96,8 @@ class ViewController: UIViewController {
     
     // Random Logic for Dice
     func randomDices() {
+        diceChange = diceChange + 1
+        print(diceChange)
         //Getting random Integer values
         let randomInt1 : Int = Int(arc4random_uniform(6))
         let randomInt2 : Int = Int(arc4random_uniform(6))
@@ -107,6 +109,16 @@ class ViewController: UIViewController {
         // Setting images for random dice.
         diceImage1.image = UIImage(named: diceStr + String(randomInt1 + 1))
         diceImage2.image = UIImage(named: diceStr + String(randomInt2 + 1))
+        
+        if diceChange % 3 == 0 {
+            shakeLabel.isHidden = false
+            shakeLabel.text = "SensehacK"
+            
+            
+        }
+        else {
+            shakeLabel.isHidden = true
+        }
     }
 
 }
