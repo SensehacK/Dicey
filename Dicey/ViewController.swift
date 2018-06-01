@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     let diceStr = "dice"
     var appOpen: Int = 1
     var diceChange: Int = 0
+    var fireIVW = 0.0
+    var fireIVH = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -78,8 +81,7 @@ class ViewController: UIViewController {
     
     @IBAction func rollDicePressed(_ sender: Any) {
         print("rollDicePressed")
-        //Setting default Image
-        fireImageView.image = UIImage(named: "fire")
+        
         // call function
         randomDices()
         
@@ -114,15 +116,22 @@ class ViewController: UIViewController {
         diceImage1.image = UIImage(named: diceStr + String(randomInt1 + 1))
         diceImage2.image = UIImage(named: diceStr + String(randomInt2 + 1))
         
-        if diceChange % 7 == 0 || diceChange % 9 == 0 {
+        if diceChange % 7 == 0 {
             shakeLabel.isHidden = false
             shakeLabel.text = "SensehacK"
-//            fireImageView.image = UIImage(named: "fireg")
-            
+            fireImageView.frame.size.width = CGFloat(fireIVW + 20)
+            fireImageView.frame.size.height = CGFloat(fireIVH + 20)
             fireImageView.loadGif(name: "fireg")
+            fireImageView.contentMode = UIViewContentMode.bottom
+//            fireImageView.autoresizingMask = .None
+        }
+        else if diceChange % 8 == 0  {
+            shakeLabel.text = "Adhvazila.in"
         }
         else {
             shakeLabel.isHidden = true
+            //Setting default Image function
+            normalFireImageView()
         }
     }
 
