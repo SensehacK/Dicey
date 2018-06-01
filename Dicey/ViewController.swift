@@ -27,6 +27,16 @@ class ViewController: UIViewController {
         
         shakeLabel.isHidden = false
         
+        //Check first launch
+        if UserDefaults.standard.bool(forKey: "FirstLaunch") {
+            print("Not first Launch")
+            shakeLabel.isHidden = true
+        }
+        else {
+            print("First Launch")
+            UserDefaults.standard.set(true, forKey: "FirstLaunch")
+        }
+        
         //Trial Debug
         
         print("Made with 💚 Kautilya")
@@ -35,6 +45,15 @@ class ViewController: UIViewController {
         let no = 4
         
         print ( str + String(no) )
+
+        //: Playground - noun: a place where people can play
+        let 🤓 = 713
+        let 😤 = 823
+        let 😇 = 🤓 + 😤
+        
+        print(😇)
+        
+        
         
         
     }
@@ -56,6 +75,7 @@ class ViewController: UIViewController {
             print("motionShake")
             // call function
             randomDices()
+            shakeLabel.isHidden = true
         }
         else {
             print("No shakes for you today")
