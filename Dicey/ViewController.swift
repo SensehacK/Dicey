@@ -50,7 +50,9 @@ class ViewController: UIViewController {
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            
+            print("motionShake")
+            // call function
+            randomDices()
         }
         else {
             print("No shakes for you today")
