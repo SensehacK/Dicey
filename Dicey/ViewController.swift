@@ -126,16 +126,12 @@ class ViewController: UIViewController {
         diceImage2.image = UIImage(named: diceStr + String(randomInt2 + 1))
         
         if diceChange % 7 == 0 {
-            shakeLabel.isHidden = false
+            easterEggUI()
             shakeLabel.text = "SensehacK"
-            fireImageView.frame.size.width = CGFloat(fireIVW + 20)
-            fireImageView.frame.size.height = CGFloat(fireIVH + 20)
-            fireImageView.loadGif(name: "fireg")
-            fireImageView.contentMode = UIViewContentMode.bottom
 //            fireImageView.autoresizingMask = .None
         }
         else if diceChange % 8 == 0  {
-            shakeLabel.isHidden = false
+            easterEggUI()
             shakeLabel.text = "Adhvazila.in"
         }
         else {
@@ -147,8 +143,6 @@ class ViewController: UIViewController {
     
     func normalFireImageView() {
         print("Debug fire Image view width & height")
-//        fireIVW = fireImageView.frame.size.width
-//        fireIVH = fireImageView.frame.size.height
         print(fireIVW)
         print(fireIVH)
         fireImageView.frame.size.width = CGFloat(fireIVW)
@@ -156,6 +150,14 @@ class ViewController: UIViewController {
         fireImageView.contentMode = UIViewContentMode.scaleAspectFit
         fireImageView.image = UIImage(named: "fire")
         
+    }
+    
+    func easterEggUI() {
+        shakeLabel.isHidden = false
+        fireImageView.frame.size.width = CGFloat(fireIVW + 20)
+        fireImageView.frame.size.height = CGFloat(fireIVH + 20)
+        fireImageView.loadGif(name: "fireg")
+        fireImageView.contentMode = UIViewContentMode.bottom
     }
 
 }
